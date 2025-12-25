@@ -55,18 +55,18 @@ export const ProjectsSection = () => {
           </p>
         </div>
 
-        <h2 className="font-serif text-3xl mt-5 text-center">
+        <h2 className="font-serif text-3xl  md:text-5xl mt-5 text-center">
           Featured Projects
         </h2>
-        <p className="text-center text-white/60 mt-4">
+        <p className="text-center text-white/60 mt-4 md:text-lg max-w-md mx-auto">
           See how our projects have delivered real-world results for our
           clients.
         </p>
-        <div className="flex flex-col mt-8 gap-20">
+        <div className="flex flex-col mt-8 gap-20 md:mt-20">
           {portfolioProjects.map((project) => (
             <div
               key={project.title}
-              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none px-8 pt-8"
+              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none px-8 pt-8 md:pt-12 md:px-10"
             >
               <div
                 className="absolute inset-0 -z-10 opacity-5"
@@ -79,29 +79,31 @@ export const ProjectsSection = () => {
                 <span>&bull;</span>
                 <span>{project.year}</span>
               </div>
-              <h3 className="font-serif text-2xl mt-2">{project.title}</h3>
-              <hr className="border-t-2 border-white/5 mt-4" />
-              <ul className="flex flex-col gap-4 mt-4">
+              <h3 className="font-serif text-2xl mt-2 md:text-4xl md:mt-5">
+                {project.title}
+              </h3>
+              <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
+              <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                 {project.results.map((result) => (
                   <li
                     key={result.title}
-                    className="flex gap-2 text-white/50 text-sm"
+                    className="flex gap-2 text-white/50 text-sm md:text-base "
                   >
-                    <CheckCircleIcon className="size-5" />
+                    <CheckCircleIcon className="size-5 md:size-6" />
                     <span>{result.title}</span>
                   </li>
                 ))}
               </ul>
               <a href={project.link}>
-                <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 hover:bg-white/55 transition">
-                  <span>Visite Live Site</span>
+                <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 hover:bg-white/55 transition px-6 md:w-auto">
+                  <span>Visie Live Site</span>
                   <ArrowUprightIcon className="size-5" />
                 </button>
               </a>
               <Image
                 src={project.image}
                 alt={project.title}
-                className="mt-8 -mb-4"
+                className="mt-8 -mb-4 md:-mb-0"
               />
             </div>
           ))}
