@@ -1,7 +1,6 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import StarIcon from "@/assets/icons/star.svg";
-import { TechIcon } from "@/components/TechIcon";
 import bookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
@@ -42,30 +41,6 @@ const toolboxItems = [
   },
 ];
 
-const hobbies = [
-  {
-    title: "Painting",
-  },
-  {
-    title: "Photography",
-  },
-  {
-    title: "Gaming",
-  },
-  {
-    title: "Hiking",
-  },
-  {
-    title: "Music",
-  },
-  {
-    title: "Fitness",
-  },
-  {
-    title: "Reading",
-  },
-];
-
 export const AboutSection = () => {
   return (
     <section className="py-16">
@@ -98,19 +73,6 @@ export const AboutSection = () => {
               className="mt-6"
               itemsWrapperClassName="-translate-x-1/2"
             />
-          </Card>
-          <Card className="h-[320px]">
-            <CardHeader
-              title="Beyond the Code"
-              description="Exolore my interests and hobbies beyond the digital realm."
-            />
-            <div>
-              {hobbies.map((hobby) => (
-                <div key={hobby.title}>
-                  <span>{hobby.title}</span>
-                </div>
-              ))}
-            </div>
           </Card>
           <Card className="h-[320px] p-0 realtive">
             <Image
