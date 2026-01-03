@@ -60,15 +60,17 @@ export const HeroSection = () => {
             alt="Computer guy"
           />
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-2 rounded-lg">
-            <div className="bg-green-500 size-2.5 rounded-full"></div>
+            <div className="bg-green-500 size-2.5 rounded-full relative">
+              <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
+            </div>
             <div className="text-sm font-medium">
               Available for new projects
             </div>
           </div>
         </div>
         <div className="max-w-lg mx-auto">
-          <h1 className="font-serif text-3xl text-center mt-8 tracking-wide md:text-5xl">
-            Building exceptional user experiences
+          <h1 className="font-serif font-bold text-3xl text-center mt-8 tracking-wide md:text-5xl">
+            Building Exceptional User Experiences
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
             I specialize in creating intuitive and engaging digital products
